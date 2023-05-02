@@ -1,0 +1,170 @@
+@import 'colors.scss';
+@import 'nav.scss';
+
+
+.cat-b {
+	opacity: 0;
+	line-height: 1.8rem;
+	.section_heading {
+		margin-top: 7rem;
+		margin-bottom: 4rem;
+	}
+	.section_heading-item::before {
+		width: 140%;
+	}
+	.cat-b_heading {
+		font-size: 1.7rem;
+		margin-bottom: 3rem;
+	}
+	.cat-b_second_heading {
+		font-size: 1.4rem;
+		margin-bottom: 2rem;
+
+		color: #1d1d1d;
+		font-weight: 600;
+	}
+	.cat-b_desc {
+		font-size: 1.2rem;
+		margin-bottom: 3rem;
+		color: #494949;
+	}
+	.cat-b_list {
+		font-size: 1.2rem;
+		margin-bottom: 5rem;
+		color: #494949;
+
+		li {
+			list-style: none;
+			margin-bottom: 1rem;
+		}
+	}
+
+	.section_image {
+		margin: 0 auto;
+		position: relative;
+		max-width: 100%;
+		margin-bottom: 5rem;
+		img {
+			max-height: 35rem;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.section_image::after {
+		position: absolute;
+		content: '';
+		height: 100%;
+		width: 100%;
+		top: -10px;
+		right: -10px;
+		background-color: $main-color;
+		z-index: -1;
+	}
+}
+
+.cennik {
+	opacity: 0;
+	margin-top: 6rem;
+	.cennik-cnt {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.section_baner {
+			height: 5rem;
+			top: -2.5rem;
+			.section_baner-item {
+				font-weight: 600;
+				font-size: 2rem;
+			}
+		}
+
+		.pricing {
+			border-collapse: collapse;
+			box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.15);
+			width: 90%;
+			max-width: 47rem;
+			height: 30rem;
+			thead {
+				text-align: center;
+				th {
+					padding: 1rem;
+					background-color: $gray-section;
+					font-size: 1.4rem;
+					font-weight: 600;
+				}
+			}
+			tbody {
+				.pricing-row {
+					td {
+						padding: 1rem;
+					}
+					.type {
+						font-size: 1.3rem;
+						padding: 0 2rem;
+					}
+					.price {
+						text-align: center;
+						font-weight: 600;
+						font-size: 1.1rem;
+					}
+					.price:nth-child(even) {
+						border-left: 1px solid $gray-section;
+					}
+				}
+				.pricing-row:nth-child(odd) {
+					background-color: #fff;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	html {
+		font-size: 68.75%;
+	}
+}
+@media (min-width: 768px) {
+	html {
+		font-size: 75%;
+	}
+	.cat-b {
+		.section_heading {
+			margin-top: 11rem;
+			margin-bottom: 4rem;
+		}
+	}
+	nav {
+		.nav-contact {
+			border-bottom: 1px solid #000;
+			.nav-contact-item {
+				color: #000;
+			}
+		}
+		.navbar {
+			.logo {
+				p {
+					color: #000;
+				}
+			}
+			.desktop-nav {
+				.dnav-list {
+					.dnav-item-a {
+						color: black;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	html {
+		font-size: 81.25%;
+	}
+}
+@media (min-width: 1200px) {
+	html {
+		font-size: 87.5%;
+	}
+}

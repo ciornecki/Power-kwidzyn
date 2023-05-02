@@ -1,0 +1,211 @@
+@import 'colors.scss';
+@import 'nav.scss';
+
+.kategoria-A {
+	opacity: 0;
+	margin-top: 7rem;
+	.katA-cnt {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+		.section-title {
+			.section_heading {
+				margin-bottom: 4rem;
+				.section_heading-item::before {
+					width: 140%;
+				}
+			}
+		}
+		.cards-cnt {
+			display: flex;
+			flex-direction: column;
+			gap: 6rem;
+			margin-top: 6rem;
+			.katA-card {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 2rem;
+				.kat-img {
+					width: 100%;
+					max-width: 350px;
+					height: 20rem;
+					background-size: cover;
+					background-position: center;
+					box-shadow: 0.7rem -0.7rem $main-color;
+				}
+				.leftuwa {
+					box-shadow: -0.7rem -0.7rem $main-color;
+				}
+				.content {
+					display: flex;
+					flex-direction: column;
+					gap: 1rem;
+					h2 {
+						font-size: 1.5rem;
+						font-weight: 600;
+					}
+					.katA-list {
+						list-style-type: '-';
+						list-style-position: inside;
+						display: flex;
+						flex-direction: column;
+						gap: 1rem;
+						.katA-list-item {
+							font-size: 1.3rem;
+							color: #494949;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.katAM {
+	background-image: url('../../dist/img/am.jpg');
+}
+.katA1 {
+	background-image: url('../../dist/img/beneli.jpg');
+}
+.katA2 {
+	background-image: url('../../dist/img/jamaha.jpg');
+}
+.katA {
+	background-image: url('../../dist/img/galeria2.jpg');
+}
+
+/* CENNIK */
+
+.cennik {
+	opacity: 0;
+	margin-top: 6rem;
+	.cennik-cnt {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.section_baner {
+			height: 5rem;
+			top: -2.5rem;
+			.section_baner-item {
+				font-weight: 600;
+				font-size: 2rem;
+			}
+		}
+
+		.pricing {
+			border-collapse: collapse;
+			box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.15);
+			width: 90%;
+			max-width: 47rem;
+			height: 30rem;
+			thead {
+				text-align: center;
+				th {
+					padding: 1rem;
+					background-color: $gray-section;
+					font-size: 1.4rem;
+					font-weight: 600;
+				}
+			}
+			tbody {
+				.pricing-row {
+					td {
+						padding: 1rem;
+					}
+					.type {
+						font-size: 1.3rem;
+						padding: 0 2rem;
+					}
+					.price {
+						text-align: center;
+						font-weight: 600;
+						font-size: 1.1rem;
+					}
+					.price:nth-child(even) {
+						border-left: 1px solid $gray-section;
+					}
+				}
+				.pricing-row:nth-child(odd) {
+					background-color: #fff;
+				}
+			}
+		}
+	}
+}
+
+/* BREAKPOINTS */
+
+@media (min-width: 576px) {
+	html {
+		font-size: 68.75%;
+	}
+}
+@media (min-width: 768px) {
+	html {
+		font-size: 75%;
+	}
+	.kategoria-A {
+		margin-top: 10rem;
+		.katA-cnt {
+			.cards-cnt {
+				.katA-card {
+					gap: 4rem;
+					.kat-img {
+						max-width: 40rem;
+						min-height: 25rem;
+					}
+				}
+			}
+		}
+	}
+	nav {
+		.nav-contact {
+			border-bottom: 1px solid #000;
+			.nav-contact-item {
+				color: #000;
+			}
+		}
+		.navbar {
+			.logo {
+				p {
+					color: #000;
+				}
+			}
+			.desktop-nav {
+				.dnav-list {
+					.dnav-item-a {
+						color: black;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	html {
+		font-size: 81.25%;
+	}
+	.kategoria-A {
+		.katA-cnt {
+			.cards-cnt {
+				.katA-card {
+					flex-direction: row;
+					gap: 4rem;
+					.kat-img {
+						min-width: 35rem;
+					}
+				}
+				.katA-card:nth-child(odd) {
+					flex-direction: row-reverse;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	html {
+		font-size: 87.5%;
+	}
+}

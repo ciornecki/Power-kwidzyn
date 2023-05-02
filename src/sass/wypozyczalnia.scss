@@ -1,0 +1,423 @@
+@import 'colors.scss';
+@import 'nav.scss';
+
+.first_img {
+	background-image: url('../img/honda.jpg');
+}
+.second_img {
+	background-image: url('../img/beneli.jpg');
+}
+.third_img {
+	background-image: url('../img/junak.jpg');
+}
+.fourth_img {
+	background-image: url('../img/romet.png');
+}
+.fifth_img {
+	background-image: url('../img/barton.jpg');
+}
+
+.pop-up {
+	opacity: 0;
+	display: none;
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	z-index: 200;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.37);
+	padding: 1.5rem;
+	.pop-up_img {
+		min-height: 30rem;
+		min-width: 100%;
+		background-position: center;
+		background-size: cover;
+		position: relative;
+
+		.mark {
+			position: absolute;
+			right: 1rem;
+			top: 1rem;
+			font-size: 2rem;
+			border: none;
+			width: 3rem;
+			height: 3rem;
+			color: white;
+			background-color: #00000092;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+		}
+	}
+}
+
+.show-pop-up {
+	display: flex;
+	animation: reval 0.3s forwards;
+}
+.close-animation {
+	opacity: 1;
+	animation: rev 0.3s forwards;
+}
+
+nav {
+	z-index: 110;
+}
+
+.introduction {
+	opacity: 0;
+	.section-cnt {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+	}
+	.section_heading {
+		margin-top: 7rem;
+		margin-bottom: 0;
+	}
+	.section_heading-item::before {
+		width: 140%;
+	}
+
+	.introduction_content {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+
+		.introduction_heading {
+			font-size: 1.7rem;
+		}
+
+		.introduction_text {
+			font-size: 1.2rem;
+			line-height: 2.5rem;
+			color: #494949;
+			li {
+				list-style: none;
+			}
+		}
+	}
+}
+
+.galery {
+	opacity: 0;
+	.section-cnt {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+		.section_heading {
+			margin-bottom: 0;
+		}
+	}
+	.carousel {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.slider {
+			position: relative;
+			height: auto;
+			width: 100%;
+			overflow: hidden;
+			margin-bottom: 6rem;
+		}
+
+		.slider_content {
+			display: flex;
+			transform: translateX(0);
+			transition: transform 0.9s;
+
+			.slider_image {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.btn {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			padding: 0.9em 1.2em;
+			color: rgb(255, 251, 0);
+			font-weight: bold;
+			background-color: rgba(0, 0, 0, 0.6);
+			border: none;
+			cursor: pointer;
+		}
+
+		.btn-prev {
+			left: 0;
+		}
+
+		.btn-next {
+			right: 0;
+		}
+	}
+}
+
+.rent_prices {
+	opacity: 0;
+	.section_baner {
+		height: 6rem;
+		top: -2.5rem;
+		.section_baner-item {
+			font-weight: 600;
+			font-size: 2.5rem;
+		}
+	}
+	.offer_cards {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 4rem;
+		.offer_card {
+			width: 100%;
+			max-width: 30rem;
+			background-color: #fff;
+			display: flex;
+			flex-direction: column;
+			border: 1px solid rgba(0, 0, 0, 0.1);
+
+			.card_img {
+				height: 20rem;
+				background-size: cover;
+				background-position: center;
+				cursor: -moz-zoom-in;
+				cursor: -webkit-zoom-in;
+				cursor: zoom-in;
+			}
+
+			.card_content {
+				padding: 1.5em;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 1.5rem;
+
+				.card_title {
+					font-size: 2rem;
+				}
+				.card_desc {
+					font-size: 1.4rem;
+					color: #494949;
+				}
+				.card_price {
+					color: $main-color;
+					font-size: 2.5rem;
+				}
+
+				.main_price {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}
+
+.rules {
+	opacity: 0;
+	.section_heading-item::before {
+		width: 160%;
+	}
+
+	.rules_box {
+		.rules_text {
+			display: flex;
+			flex-direction: column;
+			font-size: 1.2rem;
+			margin-bottom: 6rem;
+			gap: 0.5rem;
+
+			li {
+				list-style: none;
+				line-height: 2.5rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	html {
+		font-size: 68.75%;
+	}
+
+	.pop-up {
+		.pop-up_img {
+			min-width: 85%;
+		}
+	}
+
+	// intro
+
+	.introduction {
+		.introduction_content {
+			.introduction_heading {
+				margin-bottom: 3rem;
+			}
+
+			.introduction_text {
+				line-height: 2.6rem;
+			}
+		}
+	}
+
+	// galery
+
+	.galery {
+		.carousel {
+			.slider {
+				height: auto;
+				width: 90%;
+			}
+		}
+	}
+
+	.rent_prices {
+		.offer_cards {
+			gap: 7rem;
+
+			.offer_card {
+				.card_content {
+					padding: 2em;
+					gap: 2rem;
+					.card_price {
+						color: $main-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	html {
+		font-size: 75%;
+	}
+
+	.pop-up {
+		padding: 4rem;
+		.pop-up_img {
+			width: 70%;
+			height: 70vh;
+		}
+	}
+	// intro
+
+	.introduction {
+		.section_heading {
+			margin-top: 10rem;
+		}
+		padding: 5rem 4rem;
+		.introduction_content {
+			.introduction_heading {
+				margin-bottom: 3rem;
+			}
+
+			.introduction_text {
+				line-height: 3rem;
+			}
+		}
+	}
+	// galery
+
+	.galery {
+		.carousel {
+			.slider {
+				height: auto;
+				width: 80%;
+			}
+		}
+	}
+	/* nav */
+	nav {
+		.nav-contact {
+			border-bottom: 1px solid #000;
+			.nav-contact-item {
+				color: #000;
+			}
+		}
+		.navbar {
+			.logo {
+				p {
+					color: #000;
+				}
+			}
+			.desktop-nav {
+				.dnav-list {
+					.dnav-item-a {
+						color: black;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	html {
+		font-size: 81.25%;
+	}
+
+	.pop-up {
+		padding: 4rem;
+		.pop-up_img {
+			min-width: 60%;
+			height: 70vh;
+		}
+	}
+	// galery
+
+	.galery {
+		.carousel {
+			.slider {
+				max-height: 60rem;
+				width: 70%;
+			}
+		}
+	}
+	.rent_prices {
+		.offer_cards {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			.offer_card {
+				.card_content {
+					padding: 2.5em;
+					gap: 2rem;
+					.card_price {
+						color: $main-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.pop-up {
+		.pop-up_img {
+			min-width: 50%;
+			height: 80vh;
+		}
+	}
+}
+
+@keyframes reval {
+	to {
+		opacity: 1;
+	}
+}
+@keyframes rev {
+	to {
+		opacity: 0;
+	}
+}
+
+.reval {
+	animation: reval 0.4s 0.3s forwards;
+}
