@@ -121,6 +121,55 @@ body {
 .burger-icon.active .bar:nth-child(1) {
 	transform: translateY(6.8px) rotate(-45deg);
 }
+
+.social {
+	position: fixed;
+	right: 0;
+	z-index: 100;
+	width: 12rem;
+	height: 4rem;
+	color: white;
+	transform: translateX(70%);
+	text-decoration: none;
+	transition: transform 0.3s;
+	display: none;
+
+	.social_img {
+		width: 30%;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+	}
+	.social_title {
+		width: 70%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.4rem;
+	}
+}
+.social:hover {
+	transform: translateX(0);
+}
+
+.facebook {
+	color: #1b80e4;
+	top: calc(80% + 4.5rem);
+}
+
+.facebook_img {
+	background-image: url(/dist/img/facebook.png);
+}
+
+.insta {
+	color: #e91dc4;
+	top: 80%;
+}
+
+.insta_img {
+	background-image: url(/dist/img/insta.png);
+}
+
 /* HOVERY CTA */
 .btn_hover {
 	overflow: hidden;
@@ -134,7 +183,11 @@ body {
 	transform: skew(-35deg);
 	width: 20%;
 	height: 100%;
-	background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+	background-image: linear-gradient(
+		-90deg,
+		rgba(255, 255, 255, 0.3),
+		rgba(255, 255, 255, 0)
+	);
 	transition: transform 0.8s;
 }
 .btn_hover:hover::before {
@@ -756,6 +809,15 @@ footer {
 	.color {
 		color: $main-color;
 	}
+	a {
+		font-size: 2.5rem;
+		padding-left: 1rem;
+		color: white;
+		transition: transform .3s;
+	}
+	a:hover {
+		transform: rotate(10deg);
+	}
 }
 
 /* warunki*/
@@ -912,6 +974,9 @@ footer {
 				width: 130%;
 			}
 		}
+	}
+	.social {
+		display: flex;
 	}
 }
 
@@ -1199,8 +1264,12 @@ footer {
 	}
 }
 @keyframes reval {
+	from {
+		transform: scale(.8);
+	}
 	to {
 		opacity: 1;
+		transform: scale(1);
 	}
 }
 
