@@ -158,7 +158,7 @@ body {
 }
 
 .facebook_img {
-	background-image: url(/dist/img/facebook.png);
+	background-image: url(../../dist/img/facebook.png);
 }
 
 .insta {
@@ -167,7 +167,7 @@ body {
 }
 
 .insta_img {
-	background-image: url(/dist/img/insta.png);
+	background-image: url(../../dist/img/insta.png);
 }
 
 /* HOVERY CTA */
@@ -823,6 +823,7 @@ footer {
 /* warunki*/
 
 .warunki {
+	opacity: 0;
 	margin-bottom: 7rem;
 	.section_heading {
 		margin-bottom: 7rem;
