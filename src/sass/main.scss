@@ -476,7 +476,7 @@ header {
 		justify-content: center;
 		flex-direction: column;
 		gap: 6rem;
-		margin-bottom: 8rem;
+		margin-bottom: 6rem;
 
 		.details_image {
 			height: 100%;
@@ -823,8 +823,9 @@ footer {
 /* warunki*/
 
 .warunki {
+	margin-bottom: 7rem;
 	.section_heading {
-		margin-bottom: 4rem;
+		margin-bottom: 7rem;
 		.section_heading-item::before {
 			width: 110%;
 		}
