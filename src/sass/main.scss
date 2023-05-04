@@ -410,7 +410,7 @@ header {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		justify-content: space-between;
+		// justify-content: space-between;
 		gap: 6rem;
 		margin-bottom: 4rem;
 		.aboutus_image {
@@ -1133,17 +1133,15 @@ footer {
 		padding: 4rem 4rem;
 		.aboutus_content {
 			flex-direction: row-reverse;
-			align-items: flex-start;
-			justify-content: center;
+			align-items: center;
 			.aboutus_image {
-				// width: 50%;
 				img {
-					max-height: 30rem;
-					max-width: 30rem;
+					max-height: 35rem;
+					max-width: 35rem;
 				}
 			}
 			.aboutus_text {
-				width: 50%;
+				width: 55%;
 			}
 		}
 	}
